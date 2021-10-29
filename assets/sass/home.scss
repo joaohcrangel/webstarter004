@@ -1,46 +1,123 @@
 // começa no mobile
 
 #home {
+  flex-direction: column;
+  margin-top: -80px;
+  header {
+    width: 100%;
+    min-width: 320px;
+    height: 100vh;
+    background-image: url('../images/ferrari-vermelha-1200.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-position-y: center;
     flex-direction: column;
-    margin-top: -80px;
-    header {
-       width: 100%;
-       min-width: 320px;
-       height: 100vh;
-       background-image: url('../images/ferrari-vermelha-1200.webp');
-       background-size: cover;
-       background-repeat: no-repeat;
-       background-position-x: 80%;
-       background-position-y: center;
-       flex-direction: column;
-       align-items: flex-end;
-       justify-content: flex-end;
-       padding: 2em;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 2em;
+    color: var(--white);
+    ul {
+      display: none;
     }
+    h1 {
+      font-size: 80px;
+      font-weight: bold;
+      text-align: right;
+      line-height: 109px;
+    }
+    a {
+      @include button;
+      color: inherit;
+      border: 1px solid var(--white);
+      border-radius: 6px;
+      &:hover {
+        background-color: var(--white);
+        color: var(--black);
+      }
+    }
+  }
+  .gallery {
+    flex-direction: column;
+    min-width: 320px;
+    figure {
+      width: 100%;
+      margin: 0;
+      margin-top: 1px;
+      position: relative;
+      img,
+      picture {
+        width: 100%;
+      }
+      figcaption {
+        background-color: var(--black-75);
+        padding: 15px 25px;
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        h2 {
+          font-size: 24px;
+          font-weight: bold;
+          color: var(--white);
+          margin: 0;
+        }
+        p {
+          font-size: 16px;
+          color: var(--gray-3);
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 //media queries - onde usar e quando
 // celulares landscape e tablets
 @media (min-width: 576px) {
-
+}
+@media (min-width: 768px) {
+  #home {
+    header {
+      h1 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        line-height: 64px;
+      }
+      ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li {
+          margin: 0 25px;
+          font-size: 30px;
+        }
+      }
+    }
+    .gallery {
+      flex-direction: row;
+      figure + figure {
+        margin-left: 1px;
+      }
+    }
+  }
 }
 // desktop
 @media (min-width: 1200px) {
-    #home {
-        margin-top: -100px;
-        header {
-            height: 100vh;
-            max-height: unset;
-            background-image: url('../images/ferrari-vermelha.webp');
-        }
+  #home {
+    margin-top: -100px;
+    header {
+      height: 100vh;
+      max-height: unset;
+      background-image: url('../images/ferrari-vermelha.webp');
     }
+  }
 }
 // large screen
 @media (min-width: 1920px) {
-    #home {
-        header {
-             background-image: url('../images/ferrari-vermelha@2x.webp');
-        }
+  #home {
+    header {
+      background-image: url('../images/ferrari-vermelha@2x.webp');
     }
+  }
 }
 // extra-large screen 0 iMac
 //@media (min-width: 2580px) {}
