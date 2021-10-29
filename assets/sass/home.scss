@@ -1,0 +1,46 @@
+// começa no mobile
+
+#home {
+    flex-direction: column;
+    margin-top: -80px;
+    header {
+       width: 100%;
+       min-width: 320px;
+       height: 100vh;
+       background-image: url('../images/ferrari-vermelha-1200.webp');
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position-x: 80%;
+       background-position-y: center;
+       flex-direction: column;
+       align-items: flex-end;
+       justify-content: flex-end;
+       padding: 2em;
+    }
+}
+//media queries - onde usar e quando
+// celulares landscape e tablets
+@media (min-width: 576px) {
+
+}
+// desktop
+@media (min-width: 1200px) {
+    #home {
+        margin-top: -100px;
+        header {
+            height: 100vh;
+            max-height: unset;
+            background-image: url('../images/ferrari-vermelha.webp');
+        }
+    }
+}
+// large screen
+@media (min-width: 1920px) {
+    #home {
+        header {
+             background-image: url('../images/ferrari-vermelha@2x.webp');
+        }
+    }
+}
+// extra-large screen 0 iMac
+//@media (min-width: 2580px) {}

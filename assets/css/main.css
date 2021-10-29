@@ -951,5 +951,39 @@ header.page-title hr {
     color: var(--white);
   }
 }
+#home {
+  flex-direction: column;
+  margin-top: -80px;
+}
+#home header {
+  width: 100%;
+  min-width: 320px;
+  height: 100vh;
+  background-image: url("../images/ferrari-vermelha-1200.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 80%;
+  background-position-y: center;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2em;
+}
+
+@media (min-width: 1200px) {
+  #home {
+    margin-top: -100px;
+  }
+  #home header {
+    height: 100vh;
+    max-height: unset;
+    background-image: url("../images/ferrari-vermelha.webp");
+  }
+}
+@media (min-width: 1920px) {
+  #home header {
+    background-image: url("../images/ferrari-vermelha@2x.webp");
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
